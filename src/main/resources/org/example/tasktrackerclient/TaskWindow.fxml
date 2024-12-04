@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+
+<StackPane prefHeight="450.0" prefWidth="370.0" styleClass="stack_pane" stylesheets="@../../../../../../../../../../my%20files/univer/TaskTracker/TaskTrackerClient/src/main/resources/styles/SignIn.css" xmlns="http://javafx.com/javafx/22.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.tasktrackerclient.controllers.TaskWindowController">
+    <VBox alignment="CENTER" maxHeight="450.0" maxWidth="370.0" prefHeight="296.0" prefWidth="370.0" spacing="10" styleClass="sign_in_box">
+        <children>
+         <Region minHeight="5.0" />
+         <TextFlow maxHeight="200.0" maxWidth="300.0" prefHeight="200.0" prefWidth="300.0" textAlignment="CENTER">
+            <children>
+               <Text fx:id="taskNameText" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white; -fx-font-size: 30;" styleClass="top_label" text="Text" wrappingWidth="175.28125" />
+            </children>
+         </TextFlow>
+            <Region prefHeight="20.0" />
+         <TextFlow maxWidth="300.0" prefWidth="300.0">
+            <children>
+               <Text fx:id="descriptionText" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white; -fx-font-size: 15;" text="-" wrappingWidth="305.1123046875" />
+            </children>
+         </TextFlow>
+         <VBox maxWidth="300.0" minWidth="300.0" prefHeight="127.0" prefWidth="300.0">
+            <children>
+               <HBox prefHeight="100.0" prefWidth="200.0">
+                  <children>
+                     <Label style="-fx-text-fill: white; -fx-font-size: 15;" text="Приоритет:" />
+                     <Region maxWidth="5.0" minWidth="5.0" prefWidth="5.0" />
+                     <Label fx:id="priorityLabel" style="-fx-text-fill: white; -fx-font-size: 15;" text="-" />
+                  </children>
+               </HBox>
+               <HBox prefHeight="100.0" prefWidth="200.0">
+                  <children>
+                     <Label style="-fx-text-fill: white; -fx-font-size: 15;" text="Статус:" />
+                     <Region maxWidth="5.0" minWidth="5.0" prefWidth="5.0" />
+                     <Label fx:id="statusLabel" style="-fx-text-fill: white; -fx-font-size: 15;" text="-" />
+                  </children>
+               </HBox>
+               <HBox prefHeight="100.0" prefWidth="200.0">
+                  <children>
+                     <Label style="-fx-text-fill: white; -fx-font-size: 15;" text="Сделать до:" />
+                     <Region maxWidth="5.0" minWidth="5.0" prefWidth="5.0" />
+                     <Label fx:id="deadlineLabel" style="-fx-text-fill: white; -fx-font-size: 15;" text="-" />
+                  </children>
+               </HBox>
+               <HBox prefHeight="100.0" prefWidth="200.0">
+                  <children>
+                     <Label style="-fx-text-fill: white; -fx-font-size: 15;" text="Сделано:" />
+                     <Region maxWidth="5.0" minWidth="5.0" prefWidth="5.0" />
+                     <Label fx:id="endTimeLabel" style="-fx-text-fill: white; -fx-font-size: 15;" text="-" />
+                  </children>
+               </HBox>
+               <HBox prefHeight="100.0" prefWidth="200.0">
+                  <children>
+                     <Label style="-fx-text-fill: white; -fx-font-size: 15;" text="Разработчик:" />
+                     <Region maxWidth="5.0" minWidth="5.0" prefWidth="5.0" />
+                     <Label fx:id="developerLabel" style="-fx-text-fill: white; -fx-font-size: 15;" text="-" />
+                  </children>
+               </HBox>
+            </children>
+         </VBox>
+         <VBox fx:id="taskButtonsVBox" alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+<!--            <children>-->
+<!--               <HBox fx:id="doneAndRefuseButtonHBox" alignment="CENTER" prefHeight="61.0" prefWidth="370.0">-->
+<!--                  <children>-->
+<!--            -->
+<!--                        <Button maxWidth="145.0" minWidth="145.0" prefWidth="145.0" styleClass="button" text="Сделано">-->
+<!--                            <effect>-->
+<!--                                <DropShadow />-->
+<!--                            </effect>-->
+<!--                        </Button>-->
+<!--                     <Region minWidth="10.0" prefWidth="10.0" />-->
+<!--                     <Button maxWidth="145.0" minWidth="145.0" prefWidth="145.0" styleClass="button" text="Вернуть">-->
+<!--                        <effect>-->
+<!--                           <DropShadow />-->
+<!--                        </effect>-->
+<!--                     </Button>-->
+<!--                  </children>-->
+<!--               </HBox>-->
+<!--                  <Region prefHeight="10.0" prefWidth="380.0" />-->
+<!--               <Button fx:id="takeTaskButton" styleClass="button" text="Взять задачу">-->
+<!--                  <effect>-->
+<!--                     <DropShadow />-->
+<!--                  </effect>-->
+<!--               </Button>-->
+<!--            </children>-->
+         </VBox>
+         <Region minHeight="10.0" prefHeight="20.0" />
+        </children>
+    </VBox>
+</StackPane>

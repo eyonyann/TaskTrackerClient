@@ -1,0 +1,82 @@
+.stack_pane {
+    -fx-background-color: #1c1c1c;
+}
+
+.image_view {
+    -fx-opacity: 0.3;
+}
+
+.sign_in_box {
+    -fx-background-color: #131317;
+    -fx-background-radius: 20;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 20, 0.3, 0, 5);
+}
+
+.top_label {
+    -fx-font-size: 48;
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+}
+
+.text_field {
+    -fx-background-color: transparent;
+    -fx-border-color: white;
+    -fx-border-radius: 10;
+    -fx-text-fill: white;
+    -fx-font-size: 24;
+    -fx-prompt-text-fill: #888888;
+}
+
+.choice_box {
+    -fx-background-color: transparent;
+    -fx-border-color: white;
+    -fx-border-radius: 10;
+    -fx-text-fill: white;
+    -fx-font-size: 24;
+}
+
+.choice_box .label {
+    -fx-text-fill: white;
+}
+
+.choice_box .list-cell {
+    -fx-background-color: #1c1c1c; /* Цвет фона для выпадающего списка */
+    -fx-text-fill: white; /* Цвет текста элементов */
+}
+
+.choice_box .list-cell:selected, .choice_box .list-cell:focused {
+    -fx-background-color: #888888; /* Цвет фона для выбранного элемента */
+    -fx-text-fill: #131317; /* Цвет текста выбранного элемента */
+}
+
+.hyperlink {
+    -fx-underline: true;
+    -fx-wrap-text: true;
+    -fx-font-size: 15;
+    -fx-text-fill: #888888;
+    -fx-focus-color: transparent; /* Убираем фокусное выделение */
+    -fx-faint-focus-color: transparent; /* Убираем слабое фокусное выделение */
+}
+
+.hyperlink:hover {
+    -fx-text-fill: white;
+    -fx-transition: all 0.5s;
+}
+
+.button {
+    /*-fx-background-color: #888888;*/
+    /*-fx-text-fill: #131317;*/
+    -fx-background-color: white;
+    -fx-text-fill: #131317;
+    -fx-background-radius: 10;
+    -fx-padding: 10 20;
+    -fx-max-width: 300;
+    -fx-font-size: 20;
+    -fx-font-weight: bold;
+}
+
+.button:hover {
+    -fx-background-color: #888888;
+    -fx-text-fill: #131317;
+    -fx-transition: all 0.5s;
+}

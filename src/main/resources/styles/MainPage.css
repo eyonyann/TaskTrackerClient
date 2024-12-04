@@ -1,0 +1,305 @@
+.backgroundHBox {
+    -fx-background-color: transparent;
+}
+
+.leftMenuVBox {
+    -fx-background-color: transparent;
+}
+
+.topMenuVBox {
+    -fx-background-color: transparent;
+    -fx-padding: 10, 10, 10, 10;
+}
+
+.leftButtonsMenu .button {
+    -fx-background-color: #131317;
+    -fx-text-fill: white;
+    -fx-font-size: 20;
+    -fx-padding: 8, 10, 8, 10;
+    -fx-background-radius: 10;
+}
+
+.leftButtonsMenu .button:hover {
+    -fx-background-color: #707070;
+    -fx-cursor: hand;
+}
+
+.bottomMenuVBox {
+    -fx-background-color: transparent;
+    -fx-padding: 10, 10, 10, 10;
+}
+
+.profileBox {
+    -fx-background-radius: 10;
+    -fx-padding: 10, 10, 10, 10;
+    -fx-cursor: hand;
+}
+
+.profileBox .label {
+    -fx-text-fill: #afafaf;
+    -fx-font-size: 15;
+    -fx-font-weight: bold;
+}
+
+.rightMainVBox {
+    -fx-background-color: transparent;
+}
+
+.mainVBox {
+    -fx-background-color: #1b1b1b;
+    -fx-opacity: 0.7;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+}
+
+.button {
+    -fx-background-color: white;
+    -fx-text-fill: #1b1b1b;
+    -fx-background-radius: 10;
+    -fx-padding: 10 20;
+    -fx-font-size: 14;
+    -fx-font-weight: bold;
+}
+
+.button:hover {
+    -fx-background-color: #888888;
+    -fx-text-fill: #1b1b1b;
+    -fx-transition: all 0.5s;
+}
+
+.logoLabel {
+    -fx-text-fill: white;
+    -fx-font-size: 30;
+    -fx-font-weight: bold;
+}
+
+.logoBox {
+    -fx-background-radius: 10;
+    -fx-padding: 10, 10, 10, 10;
+}
+
+.profilePicture {
+    -fx-fill: #131317;
+}
+
+.stackPane {
+    -fx-background-color: #1b1b1b;
+}
+
+.backgroundImage {
+    -fx-opacity: 0.3;
+}
+
+.blurLayer {
+
+    -fx-background-color: transparent;
+    -fx-background-radius: 10;
+}
+
+.taskLabel {
+    -fx-background-color: #131317;
+    -fx-text-fill: white;
+    -fx-font-size: 20;
+    -fx-padding: 8 10;
+    -fx-background-radius: 10;
+    -fx-border-color: rgba(255, 255, 255, 0.3);
+    -fx-border-width: 1;
+    -fx-border-radius: 10;
+    -fx-alignment: TOP_LEFT;
+    -fx-cursor: hand;
+}
+
+
+.taskInfo {
+    -fx-text-fill: white;
+    -fx-font-size: 14;
+    -fx-alignment: TOP_LEFT;
+}
+
+.taskName {
+    -fx-text-fill: white;
+    -fx-font-size: 20;
+    -fx-font-weight: bold;
+    -fx-alignment: TOP_LEFT;
+}
+
+.taskInfoKey {
+    -fx-text-fill: white;
+    -fx-font-size: 14;
+    -fx-font-weight: bold;
+    -fx-padding: 0 10 0 0;
+}
+
+.taskInfoValue {
+    -fx-text-fill: white;
+    -fx-font-size: 14;
+    -fx-padding: 0 0 5 0;
+}
+
+.taskDescription {
+    -fx-text-fill: grey;
+    -fx-font-size: 13;
+    -fx-wrap-text: true;
+    -fx-padding: 5;
+}
+
+.taskName {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+.highTaskPriority {
+    -fx-text-fill: rgba(255, 0, 0, 0.69); /* Цвет для обозначения высокого приоритета */
+    -fx-padding: 0 0 0 8px;
+    -fx-font-size: 13px;
+    -fx-alignment: BOTTOM_LEFT;
+}
+
+.mediumTaskPriority {
+    -fx-text-fill: rgba(255, 183, 0, 0.69); /* Цвет для обозначения высокого приоритета */
+    -fx-padding: 0 0 0 8px;
+    -fx-font-size: 13px;
+    -fx-alignment: BOTTOM_LEFT;
+}
+
+.lowTaskPriority {
+    -fx-text-fill: rgba(0, 255, 60, 0.69); /* Цвет для обозначения высокого приоритета */
+    -fx-padding: 0 0 0 8px;
+    -fx-font-size: 13px;
+    -fx-alignment: BOTTOM_LEFT;
+}
+
+.taskStep {
+    -fx-text-fill: grey;
+    -fx-font-size: 13px;
+}
+
+.taskDeadline {
+    -fx-text-fill: grey;
+    -fx-font-size: 13px;
+}
+
+
+
+.tableView {
+    -fx-background-color: rgba(255, 255, 255, 0.15);
+    -fx-background-radius: 10;
+    -fx-border-color: rgba(255, 255, 255, 0.3);
+    -fx-border-radius: 10;
+    -fx-text-fill: black;
+}
+
+.tableViewColumnText {
+    -fx-text-fill: black;
+    -fx-fill: black;
+}
+
+
+.lineChart {
+    -fx-background-color: rgba(255, 255, 255, 0.15);
+    -fx-background-radius: 10;
+    -fx-border-color: rgba(255, 255, 255, 0.3);
+    -fx-border-radius: 10;
+    -fx-padding: 10;
+}
+
+.lineChart .chart-series-line {
+    -fx-stroke-width: 2;
+}
+
+.lineChart .chart-legend-item-symbol {
+}
+
+.lineChart .chart-legend {
+    -fx-text-fill: white;
+}
+
+.lineChart .axis-label {
+    -fx-text-fill: white;
+}
+
+.lineChart .chart-title {
+    -fx-text-fill: white;
+    -fx-font-size: 18;
+    -fx-font-weight: bold;
+}
+
+.lineChart .axis {
+    -fx-tick-label-fill: white;
+}
+
+.profileBox .profileLabel {
+    -fx-text-fill: #afafaf;
+    -fx-font-size: 15;
+    -fx-font-weight: bold;
+}
+
+.profileBox .profileRoleLabel {
+    -fx-text-fill: #afafaf;
+    -fx-font-size: 13;
+    -fx-font-weight: normal;
+}
+
+.scroll-pane {
+    -fx-background-color: rgba(0, 0, 0, 0.6);
+    -fx-background: transparent;
+    -fx-padding: 10;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+}
+
+.scroll-pane .viewport {
+    -fx-background-color: transparent;
+}
+
+.scroll-pane .scroll-bar{
+    -fx-background-color: rgba(0, 0, 0, 0.6);
+    -fx-background: transparent;
+    -fx-background-radius: 10;
+}
+
+
+.projectDescriptionText {
+    -fx-font-size: 16;
+    -fx-text-fill: white;
+}
+
+.text_field {
+    -fx-background-color: transparent;
+    -fx-border-color: white;
+    -fx-border-radius: 10;
+    -fx-text-fill: white;
+    -fx-font-size: 24;
+    -fx-prompt-text-fill: #888888;
+}
+
+.saveButton {
+    -fx-background-color: white;
+    -fx-text-fill: #131317;
+    -fx-background-radius: 10;
+    -fx-padding: 10 20;
+    -fx-max-width: 300;
+    -fx-font-size: 20;
+    -fx-font-weight: bold;
+}
+
+.signOutButton {
+    -fx-background-color: transparent;
+    -fx-border-color: #888888;
+    -fx-border-radius: 10;
+    -fx-text-fill: #888888;
+    -fx-background-radius: 10;
+    -fx-padding: 10 20;
+    -fx-max-width: 300;
+    -fx-font-size: 20;
+    -fx-font-weight: bold;
+}
+
+.user_info_choice_box {
+    -fx-background-color: transparent;
+}
+
+.user_info_choice_box .label {
+    -fx-fill: white;
+    -fx-text-fill: white;
+}

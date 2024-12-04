@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<StackPane prefHeight="700.0" prefWidth="1200.0" styleClass="stackPane" stylesheets="@../../../../../../../../../../my%20files/univer/TaskTracker/TaskTrackerClient/src/main/resources/styles/MainPage.css" xmlns="http://javafx.com/javafx/22.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.tasktrackerclient.controllers.AdminMainPageController">
+
+    <!-- Фоновое изображение -->
+    <ImageView fitHeight="700.0" fitWidth="1200.0" pickOnBounds="true" preserveRatio="true" styleClass="backgroundImage">
+        <image>
+            <Image url="@../../../../../../../../../../my%20files/univer/TaskTracker/TaskTrackerClient/src/main/resources/images/background.png" />
+        </image>
+        <!--      <effect>-->
+        <!--         <GaussianBlur radius="5.0" />-->
+        <!--      </effect>-->
+    </ImageView>
+
+    <!-- Основной HBox для содержимого -->
+    <HBox alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" styleClass="backgroundHBox">
+        <children>
+            <VBox alignment="CENTER_LEFT" prefHeight="715.0" prefWidth="250.0" styleClass="leftMenuVBox">
+                <children>
+                    <VBox alignment="CENTER" prefHeight="100.0" prefWidth="250.0" styleClass="bottomMenuVBox">
+                        <children>
+                            <VBox alignment="CENTER_LEFT" maxWidth="200.0" prefHeight="100.0" prefWidth="200.0" styleClass="logoBox">
+                                <children>
+                                    <Label styleClass="logoLabel" text="Task tracker">
+                                        <font>
+                                            <Font size="24.0" />
+                                        </font>
+                                    </Label>
+                                </children>
+                            </VBox>
+                        </children>
+                    </VBox>
+                    <VBox alignment="CENTER" prefHeight="490.0" prefWidth="250.0" styleClass="topMenuVBox">
+                        <children>
+                            <VBox alignment="TOP_CENTER" maxHeight="500.0" maxWidth="200.0" prefHeight="400.0" prefWidth="200.0" styleClass="leftButtonsMenu">
+                                <children>
+                                    <Button fx:id="mainPageButton" mnemonicParsing="false" onAction="#MainPage" prefHeight="50.0" prefWidth="180.0" text="Главная" textAlignment="CENTER" />
+                                    <Region prefHeight="20.0" />
+                                    <Button fx:id="projectPageButton" mnemonicParsing="false" onAction="#ProjectPage" prefHeight="50.0" prefWidth="180.0" text="Проекты" textAlignment="CENTER" />
+                                    <Region prefHeight="20.0" />
+                                    <Button fx:id="taskPageButton" mnemonicParsing="false" onAction="#TasksPage" prefHeight="50.0" prefWidth="180.0" text="Задачи" textAlignment="CENTER" />
+                                </children>
+                            </VBox>
+                        </children>
+                    </VBox>
+                    <VBox alignment="CENTER" prefHeight="100.0" prefWidth="250.0" styleClass="bottomMenuVBox">
+                        <children>
+                            <HBox fx:id="profileBox" alignment="CENTER" onMouseClicked="#handleProfileBoxClick" prefHeight="54.0" prefWidth="230.0" styleClass="profileBox">
+                                <children>
+                                    <Circle radius="25.0" styleClass="profilePicture" />
+                                    <Region prefHeight="20.0" prefWidth="10.0" />
+                                    <VBox alignment="CENTER_LEFT">
+                                        <Label fx:id="profileNameLabel" styleClass="profileLabel" text="-" />
+                                        <Label fx:id="profileRoleLabel" styleClass="profileRoleLabel" text="-" />
+                                    </VBox>
+                                </children>
+                            </HBox>
+                        </children>
+                    </VBox>
+                </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="950.0" styleClass="rightMainVBox">
+                <children>
+                    <StackPane maxHeight="670.0" maxWidth="930.0" prefHeight="670.0" prefWidth="650.0" styleClass="mainVBox">
+                        <children>
+                            <ScrollPane prefHeight="670.0" prefWidth="903.0" styleClass="scroll-pane">
+                                <content>
+                                    <!-- Полупрозрачный размытый слой -->
+                                    <VBox fx:id="blurLayer" alignment="TOP_CENTER" prefHeight="811.0" prefWidth="888.0" styleClass="blurLayer">
+                                        <children>
+                                            <Region maxHeight="30.0" minHeight="30.0" prefHeight="30.0" />
+                                            <VBox maxWidth="800.0" prefHeight="278.0" prefWidth="800.0">
+                                                <children>
+                                                    <HBox prefHeight="51.0" prefWidth="800.0">
+                                                        <children>
+                                                            <Label text="Пользователи:" textFill="WHITE">
+                                                                <font>
+                                                                    <Font name="System Bold" size="48.0" />
+                                                                </font>
+                                                            </Label>
+                                                        </children>
+                                                    </HBox>
+                                                    <VBox fx:id="userInfoTableVBox" prefHeight="200.0" prefWidth="100.0">
+                                                        <!--                                                        <children>-->
+                                                        <!--                                                            <HBox  prefHeight="268.0" prefWidth="800.0">-->
+                                                        <!--                                                                <children>-->
+                                                        <!--                                                                    <VBox prefHeight="100.0" prefWidth="42.0">-->
+                                                        <!--                                                                        <children>-->
+                                                        <!--                                                                            <Label prefHeight="35.0" prefWidth="80.0" style="-fx-font-size: 24; -fx-font-weight: bold; -fx-alignment: left;" text="ID" />-->
+                                                        <!--                                                                            <VBox prefHeight="82.0" prefWidth="25.0">-->
+                                                        <!--                                                                                <children>-->
+                                                        <!--                                                                                    <Label prefHeight="35.0" prefWidth="80.0" style="-fx-font-size: 24; -fx-alignment: left;" text="1" />-->
+                                                        <!--                                                                                </children>-->
+                                                        <!--                                                                            </VBox>-->
+                                                        <!--                                                                        </children>-->
+                                                        <!--                                                                    </VBox>-->
+                                                        <!--                                                                    <VBox prefHeight="100.0" prefWidth="243.0">-->
+                                                        <!--                                                                        <children>-->
+                                                        <!--                                                                            <Label prefHeight="35.0" prefWidth="264.0" style="-fx-font-size: 24; -fx-font-weight: bold; -fx-alignment: left;" text="Имя Фамилия" />-->
+                                                        <!--                                                                            <VBox prefHeight="65.0" prefWidth="210.0">-->
+                                                        <!--                                                                                <children>-->
+                                                        <!--                                                                                    <Label prefHeight="35.0" prefWidth="272.0" style="-fx-font-size: 24; -fx-alignment: left;" text="Вдовенко Никита" />-->
+                                                        <!--                                                                                </children>-->
+                                                        <!--                                                                            </VBox>-->
+                                                        <!--                                                                        </children>-->
+                                                        <!--                                                                    </VBox>-->
+                                                        <!--                                                                    <VBox prefHeight="100.0" prefWidth="156.0">-->
+                                                        <!--                                                                        <children>-->
+                                                        <!--                                                                            <Label prefHeight="35.0" prefWidth="165.0" style="-fx-font-size: 24; -fx-font-weight: bold; -fx-alignment: left;" text="Логин" />-->
+                                                        <!--                                                                            <VBox prefHeight="65.0" prefWidth="210.0">-->
+                                                        <!--                                                                                <children>-->
+                                                        <!--                                                                                    <Label prefHeight="35.0" prefWidth="272.0" style="-fx-font-size: 24; -fx-alignment: left;" text="eyonyann" />-->
+                                                        <!--                                                                                </children>-->
+                                                        <!--                                                                            </VBox>-->
+                                                        <!--                                                                        </children>-->
+                                                        <!--                                                                    </VBox>-->
+                                                        <!--                                                                    <VBox prefHeight="100.0" prefWidth="156.0">-->
+                                                        <!--                                                                        <children>-->
+                                                        <!--                                                                            <Label prefHeight="35.0" prefWidth="165.0" style="-fx-font-size: 24; -fx-font-weight: bold; -fx-alignment: left;" text="Роль" />-->
+                                                        <!--                                                                            <VBox prefHeight="65.0" prefWidth="210.0">-->
+                                                        <!--                                                                                <children>-->
+                                                        <!--                                                                                    <ChoiceBox prefHeight="35.0" prefWidth="120.0" style="-fx-background-color: transparent;" styleClass="user_info_choice_box" value="Разработчик">-->
+                                                        <!--                                                                                        <items>-->
+                                                        <!--                                                                                            <FXCollections fx:factory="observableArrayList">-->
+                                                        <!--                                                                                                <String fx:value="Разработчик" />-->
+                                                        <!--                                                                                                <String fx:value="Тестировщик" />-->
+                                                        <!--                                                                                                <String fx:value="Админ" />-->
+                                                        <!--                                                                                            </FXCollections>-->
+                                                        <!--                                                                                        </items>-->
+                                                        <!--                                                                                    </ChoiceBox>-->
+                                                        <!--                                                                                </children>-->
+                                                        <!--                                                                            </VBox>-->
+                                                        <!--                                                                        </children>-->
+                                                        <!--                                                                    </VBox>-->
+                                                        <!--                                                                    <VBox prefHeight="100.0" prefWidth="156.0">-->
+                                                        <!--                                                                        <children>-->
+                                                        <!--                                                                            <Label prefHeight="35.0" prefWidth="165.0" style="-fx-font-size: 24; -fx-font-weight: bold; -fx-alignment: left;" text="Проект" />-->
+                                                        <!--                                                                            <VBox prefHeight="65.0" prefWidth="210.0">-->
+                                                        <!--                                                                                <children>-->
+                                                        <!--                                                                                    <ChoiceBox prefHeight="35.0" prefWidth="120.0" style="-fx-background-color: transparent;" styleClass="user_info_choice_box" value="Task tracker">-->
+
+                                                        <!--                                                                                    </ChoiceBox>-->
+                                                        <!--                                                                                </children>-->
+                                                        <!--                                                                            </VBox>-->
+                                                        <!--                                                                        </children>-->
+                                                        <!--                                                                    </VBox>-->
+                                                        <!--                                                                    <VBox prefHeight="151.0" prefWidth="113.0">-->
+                                                        <!--                                                                        <children>-->
+                                                        <!--                                                                            <Label prefHeight="35.0" prefWidth="165.0" style="-fx-font-size: 24; -fx-font-weight: bold; -fx-alignment: left;" text="Удалить" />-->
+                                                        <!--                                                                            <VBox prefHeight="65.0" prefWidth="210.0">-->
+                                                        <!--                                                                                <children>-->
+                                                        <!--                                                                                    <Label prefHeight="35.0" prefWidth="131.0" style="-fx-font-size: 20; -fx-alignment: center; -fx-text-fill: red;" text="Удалить" />-->
+                                                        <!--                                                                                </children>-->
+                                                        <!--                                                                            </VBox>-->
+                                                        <!--                                                                        </children>-->
+                                                        <!--                                                                    </VBox>-->
+                                                        <!--                                                                </children>-->
+                                                        <!--                                                            </HBox>-->
+                                                        <!--                                                        </children>-->
+                                                    </VBox>
+                                                </children>
+                                            </VBox>
+
+                                            <Region maxHeight="30.0" minHeight="30.0" prefHeight="30.0" prefWidth="888.0" />
+                                            <VBox maxWidth="800.0" prefHeight="378.0" prefWidth="800.0">
+                                                <children>
+                                                    <Label text="Статистика" textFill="WHITE">
+                                                        <font>
+                                                            <Font name="System Bold" size="48.0" />
+                                                        </font>
+                                                    </Label>
+                                                    <VBox fx:id="chartVBox" prefHeight="200.0" prefWidth="100.0">
+                                                        <children>
+                                                            <Region maxHeight="30.0" minHeight="30.0" prefHeight="30.0" prefWidth="888.0" />
+                                                            <LineChart fx:id="lineChart" minHeight="400.0" prefHeight="400.0" prefWidth="800.0" styleClass="lineChart" title="Прогресс задач">
+                                                                <xAxis>
+                                                                    <CategoryAxis label="Дата" side="BOTTOM" />
+                                                                </xAxis>
+                                                                <yAxis>
+                                                                    <NumberAxis label="Количество задач" lowerBound="0" side="LEFT" tickUnit="2" upperBound="10" />
+                                                                </yAxis>
+                                                            </LineChart>
+                                                        </children>
+                                                    </VBox>
+
+
+                                                </children>
+                                            </VBox>
+                                        </children>
+                                    </VBox>
+                                </content>
+                            </ScrollPane>
+                            <!-- Основное содержимое mainVBox -->
+                        </children>
+                    </StackPane>
+                </children>
+            </VBox>
+        </children>
+    </HBox>
+</StackPane>
