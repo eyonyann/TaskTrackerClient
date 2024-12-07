@@ -97,7 +97,6 @@ public class ProjectPageController {
 
     private void renderHtmlToText(String htmlContent) {
         if (htmlContent != null) {
-            // Используем библиотеку Jsoup для парсинга HTML
             Document doc = Jsoup.parse(htmlContent);
             Elements elements = doc.body().children();
 

@@ -346,8 +346,10 @@ public class AdminMainPageController {
                 dynamicLineChart.getData().add(series);
             }
 
+            Region spacingRegion = new Region();
+            spacingRegion.setMinHeight(15);
             // Добавляем график в chartVBox
-            chartVBox.getChildren().add(dynamicLineChart);
+            chartVBox.getChildren().addAll(dynamicLineChart, spacingRegion);
         }
     }
 
@@ -547,7 +549,7 @@ public class AdminMainPageController {
     }
 
     public void ProjectPage(ActionEvent actionEvent) throws IOException {
-        FXMLLoader loader = new FXMLLoader(TaskTrackerClient.class.getResource("ProjectPage.fxml"));
+        FXMLLoader loader = new FXMLLoader(TaskTrackerClient.class.getResource("AdminProjectsPage.fxml"));
         Scene scene = new Scene(loader.load());
         Stage stage = new Stage();
         stage.setResizable(false);
@@ -558,7 +560,7 @@ public class AdminMainPageController {
     }
 
     public void TasksPage(ActionEvent actionEvent) throws IOException {
-        FXMLLoader loader = new FXMLLoader(TaskTrackerClient.class.getResource("TaskPage.fxml"));
+        FXMLLoader loader = new FXMLLoader(TaskTrackerClient.class.getResource("AdminTasksPage.fxml"));
         Scene scene = new Scene(loader.load());
         Stage stage = new Stage();
         stage.setResizable(false);

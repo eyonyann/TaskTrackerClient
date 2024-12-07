@@ -60,6 +60,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 public class Task {
     private Long id;
+    private Long projectId;
     private String name;
     private String description;
     private String status;
@@ -69,10 +70,27 @@ public class Task {
     private LocalDateTime checkTime;
     private Long developerId;
     private Long testerId;
+
+    public Task(String name, Long projectId, String deadline, String description, String status, String priority) {
+        this.projectId = projectId;
+        this.name = name;
+        this.description = description;
+        this.deadline = LocalDateTime.parse(deadline);
+        this.status = status;
+        this.priority = priority;
+        this.testerId = null;
+        this.developerId = null;
+        this.endTime = null;
+        this.checkTime = null;
+    }
+
+
+
     @Override
     public String toString() {
         return "Task{" +
                 "id=" + id +
+                ", projectId=" + projectId +
                 ", name='" + name + '\'' +
                 ", description='" + description + '\'' +
                 ", status='" + status + '\'' +

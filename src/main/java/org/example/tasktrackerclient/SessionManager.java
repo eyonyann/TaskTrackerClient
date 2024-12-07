@@ -1,15 +1,12 @@
 package org.example.tasktrackerclient;
 
+import lombok.Getter;
+import lombok.Setter;
+
 public class SessionManager {
+    @Getter
+    @Setter
     private static String authToken;
-
-    public static void setAuthToken(String token) {
-        authToken = token;
-    }
-
-    public static String getAuthToken() {
-        return authToken;
-    }
 
     public static void clearAuthToken() {
         authToken = null;

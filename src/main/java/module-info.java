@@ -7,8 +7,8 @@ module org.example.tasktracker.client {
     requires com.fasterxml.jackson.databind;
     requires jsoup;
 
-    opens org.example.tasktrackerclient.models to com.fasterxml.jackson.databind;
-    opens org.example.tasktrackerclient.dtos to com.fasterxml.jackson.databind; // Добавлено
+    opens org.example.tasktrackerclient.models to com.fasterxml.jackson.databind, javafx.base; // Добавлено javafx.base
+    opens org.example.tasktrackerclient.dtos to com.fasterxml.jackson.databind;
     opens org.example.tasktrackerclient.controllers to javafx.fxml;
 
     exports org.example.tasktrackerclient;

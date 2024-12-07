@@ -20,4 +20,10 @@ public class Project {
 
     @JsonIgnore
     private List<User> users;
+
+    public Project(String name, String deadline, String htmlDescription) {
+        this.name = name;
+        this.description = htmlDescription;
+        this.deadline = deadline;
+    }
 }
